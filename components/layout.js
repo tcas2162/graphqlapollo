@@ -27,18 +27,18 @@ const {user} = useContext(AppContext);
         <style jsx>
           {`
             a {
-              color: white;
+              color: gray;
             }
             h5 {
-              color: white;
+              color: gray;
               padding-top: 11px;
             }
           `}
         </style>
-        <Nav className="navbar navbar-dark bg-dark">
+        <Nav className="navbar navbar-light bg-light">
           <NavItem>
             <Link href="/">
-              <a className="navbar-brand">Home</a>
+              <a className="navbar-brand">GoodEats</a>
             </Link>
           </NavItem>
           <NavItem className="ml-auto">

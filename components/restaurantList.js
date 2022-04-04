@@ -65,7 +65,7 @@ function RestaurantList(props) {
           </CardBody>
           <div className="card-footer">
 
-            <Button color="info" onClick={() => setRestaurantID(res.id)}>{res.name}</Button>
+            <Button color="success" onClick={() => setRestaurantID(res.id)}>{res.name}</Button>
 
           </div>
         </Card>

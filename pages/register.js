@@ -26,7 +26,7 @@ const Register = () => {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/5a60a9d26a764e7cba1099d8b157b5e9.png" />
+            <div className="container"><h1>Create An Account</h1></div>
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
@@ -90,23 +90,24 @@ const Register = () => {
                     </span>
                     <Button
                       style={{ float: "right", width: 120 }}
-                      color="primary"
+                      color="success"
                       disabled={loading}
                       onClick={() => {
                         setLoading(true);
                         registerUser(data.username, data.email, data.password)
                           .then((res) => {
-                            // set authed user in global context object
-                            appContext.setUser(res.data.user);
-                            setLoading(false);
-                            console.log(`registered user: ${JSON.stringify(res.data)}`)
-                          })
-                          .catch((error) => {
-                            console.log(`error in register: ${error}`)
-                            //setError(error.response.data);
-                            setLoading(false);
-                          });
-                      }}
+                           // set authed user in global context object
+                           appContext.setUser(res.data.user);
+                           alert('Account successfully created')
+                           setLoading(false);
+                           console.log(`registered user: ${JSON.stringify(res.data)}`)
+                         })
+                         .catch((error) => {
+                           console.log(`error in register: ${error}`)
+                           //setError(error.response.data);
+                           setLoading(false);
+                         });
+                     }}
                     >
                       {loading ? "Loading.." : "Submit"}
                     </Button>
@@ -133,7 +134,7 @@ const Register = () => {
           .header {
             width: 100%;
             height: 120px;
-            background-color: #2196f3;
+            background-color: #28a75d;
             margin-bottom: 30px;
             border-radius-top: 6px;
           }

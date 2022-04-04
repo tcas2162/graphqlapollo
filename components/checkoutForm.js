@@ -51,10 +51,11 @@ function CheckoutForm() {
         token: token.token.id,
       }),
     });
-
+    
+    alert('Your order has successfully processed!')
     if (!response.ok) {
       setError(response.statusText);
-      console.log("SUCCESS")
+      console.log("Please be sure to enter 4242 4242 4242 4242 Exp 04/24 Code 42424")
     }
 
     // OTHER stripe methods you can use depending on app
